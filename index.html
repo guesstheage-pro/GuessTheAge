@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the Age - Pro</title>
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' https://flagcdn.com data:;">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container" id="screen-language">
+        <h1 class="main-title" style="margin-top: 40px;">
+            <span class="white-text">Select</span><br>
+            <span class="accent-text">Language</span>
+        </h1>
+        <p class="secondary-text" style="text-align: center; margin-bottom: 50px;">CHOOSE YOUR LANGUAGE</p>
+        
+        <div class="lang-buttons">
+            <button class="btn-lang" onclick="setLanguage('it')">🇮🇹 Italiano</button>
+            <button class="btn-lang" onclick="setLanguage('en')">🇬🇧 English</button>
+            <button class="btn-lang" onclick="setLanguage('es')">🇪🇸 Español</button>
+            <button class="btn-lang" onclick="setLanguage('fr')">🇫🇷 Français</button>
+            <button class="btn-lang" onclick="setLanguage('de')">🇩🇪 Deutsch</button>
+            <button class="btn-lang" onclick="setLanguage('pt')">🇵🇹 Português</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="screen-home">
+        <p class="back-link" id="t-back-lang" onclick="showLanguageScreen()">← CAMBIA LINGUA</p>
+        <p class="secondary-text top-text" id="t-home-top">THE GAME OF PERCEPTION</p>
+        <h1 class="main-title">
+            <span class="white-text">Guess</span><br>
+            <span class="outline-text">The</span> <span class="accent-text">Age</span>
+        </h1>
+        <p class="secondary-text middle-text" id="t-home-mid">PUOI DECODIFICARE LA LINEA DEL TEMPO UMANA?</p>
+        <div class="button-wrapper">
+            <button class="btn-play" id="t-btn-play" onclick="showDisclaimer()">PLAY</button>
+        </div>
+        <p class="secondary-text bottom-text" id="t-home-bot">UN ESPERIMENTO SOCIALE SULLA PERCEZIONE</p>
+    </div>
+
+    <div class="container hidden" id="screen-disclaimer">
+        <p class="secondary-text" style="color: #bdfd1a;" id="t-disc-top">AVVISO DI PROTOCOLLO 04-B</p>
+        <h2 class="main-title" style="font-size: 3.2rem; margin-top: 15px; margin-bottom: 25px; text-align: left; letter-spacing: -2px;">
+            <span class="white-text" id="t-disc-title1">Percezione</span><br>
+            <span class="outline-text">Bio</span><span class="accent-text">metrica</span>
+        </h2>
+        
+        <div class="disclaimer-box">
+            <p id="t-disc-p1">Le immagini presentate sono generate tramite algoritmi di sintesi neurale basati sullo studio <strong>'Trans-Global Aging Perception'</strong>.</p>
+            <br>
+            <p id="t-disc-p2">L'invecchiamento umano varia drasticamente in base a <span class="highlight-word">latitudine</span>, <span class="highlight-word">cortisolo endogeno</span> ed <span class="highlight-word">epigenetica regionale</span>.</p>
+            <br>
+            <p id="t-disc-p3">Pertanto, alcune età potrebbero <strong>differire dai tuoi canoni estetici locali</strong>. Il test sfida la tua capacità di decodificare l'età biologica universale, superando i bias culturali.</p>
+        </div>
+        
+        <button class="btn-start btn-prosegui" id="t-btn-pros" onclick="showModesScreen()">PROSEGUI →</button>
+        <p class="secondary-text" style="margin-top: 15px; font-size: 0.5rem; text-align: center;" id="t-disc-bot">IDENTIFICAZIONE SOGGETTI NELLA SCHERMATA SUCCESSIVA</p>
+    </div>
+
+    <div class="container hidden" id="screen-modes">
+        <p class="back-link" id="t-back" onclick="showHomeScreen()">← INDIETRO</p>
+        <h2 class="section-title" id="t-mode-title">Scegli la modalità</h2>
+        <p class="secondary-text mode-subtitle" id="t-mode-sub">SELEZIONA COME VUOI GIOCARE</p>
+
+        <div class="modes-list">
+            <div class="mode-card active" onclick="selectMode(this, 'scalata')">
+                <div class="mode-info">
+                    <div class="icon-circle"><span class="mode-icon">❤</span></div>
+                    <span class="mode-name" id="name-scalata">Scalata 5 Vite</span>
+                    <span class="badge" id="badge-disp1">DISPONIBILE</span>
+                </div>
+                <div class="dot active"></div>
+            </div>
+            <div class="mode-card" onclick="selectMode(this, 'blitz')">
+                <div class="mode-info">
+                    <div class="icon-circle"><span class="mode-icon">⚡</span></div>
+                    <span class="mode-name" id="name-blitz">Blitz 60s</span>
+                    <span class="badge" id="badge-disp2">DISPONIBILE</span>
+                </div>
+                <div class="dot"></div>
+            </div>
+            
+            <div class="mode-card" onclick="selectMode(this, 'higherlower')">
+                <div class="mode-info">
+                    <div class="icon-circle"><span class="mode-icon">⚖️</span></div>
+                    <span class="mode-name" id="name-hl">Chi è più vecchio?</span>
+                    <span class="badge" id="badge-disp3" style="background:#bdfd1a; color:#000;">NUOVO</span>
+                </div>
+                <div class="dot"></div>
+            </div>
+
+            <div class="mode-card mode-versus" onclick="selectMode(this, 'versus')">
+                <div class="mode-info">
+                    <div class="icon-circle"><span class="mode-icon">🏆</span></div>
+                    <span class="mode-name" id="name-versus">Versus</span>
+                    <span class="badge-soon" id="badge-soon">PROSSIMAMENTE</span>
+                </div>
+                <div class="dot"></div>
+            </div>
+        </div>
+
+        <div class="details-box">
+            <h3 id="detail-title">❤ Scalata 5 Vite</h3>
+            <p id="detail-description">Parti con 5 vite. Ogni risposta sbagliata ne perdi una. Ogni 10 risposte corrette guadagni 5 vite extra. Massimo 20 vite.</p>
+            <ul class="details-list" id="detail-list">
+                <li>• 5 vite iniziali (Sblocca fino a 20)</li>
+                <li>• Risposta Corretta = +10 punti</li>
+                <li>• Errore = -1 vita</li>
+                <li>• Ogni 10 risposte corrette = +5 vite</li>
+            </ul>
+        </div>
+        <button class="btn-start" id="btn-start-main" onclick="startGame()">INIZIA →</button>
+    </div>
+
+    <div class="container hidden" id="screen-game">
+        <div class="game-header-inline">
+            <div id="header-left">
+                <div class="lives-container" id="lives"></div>
+                <div class="timer-container hidden" id="timer-box">
+                    <span class="timer-label" id="t-time">TEMPO:</span>
+                    <span id="timer-value">60</span><span style="font-size:0.8rem">s</span>
+                </div>
+            </div>
+            
+            <div class="score-mini">
+                <span class="score-label" id="t-score">PUNTI:</span>
+                <span id="score-value">0</span>
+            </div>
+        </div>
+
+        <div id="standard-game-ui">
+            <div class="photo-card">
+                <div class="photo-placeholder" id="photo-container">
+                    <p class="secondary-text">CARICAMENTO FOTO...</p>
+                </div>
+            </div>
+
+            <div class="answers-grid">
+                <button class="btn-answer">18</button>
+                <button class="btn-answer">32</button>
+                <button class="btn-answer">45</button>
+                <button class="btn-answer">60</button>
+            </div>
+        </div>
+
+        <div id="hl-game-ui" class="hidden">
+            <div class="hl-card" onclick="checkAnswerHL(0)" id="hl-card-0">
+                <div class="photo-placeholder" id="hl-photo-0"></div>
+            </div>
+            <div class="hl-vs">VS</div>
+            <div class="hl-card" onclick="checkAnswerHL(1)" id="hl-card-1">
+                <div class="photo-placeholder" id="hl-photo-1"></div>
+            </div>
+        </div>
+
+        <p class="text-metal" id="game-hint">INDIVIDUA L'ETÀ CORRETTA</p>
+    </div>
+
+    <div id="screen-game-over" class="hidden">
+        <div class="over-content">
+            <h1 id="over-title">GAME OVER</h1>
+            
+            <div id="over-emoji" style="font-size: 5rem; margin: 15px 0 25px 0; text-shadow: 0px 5px 15px rgba(0,0,0,0.5);">😅</div>
+            
+            <p id="over-msg"></p>
+            
+            <div class="score-box">
+                <span class="label" id="final-mode-label">Punteggio Finale</span>
+                <div id="over-score">0</div>
+            </div>
+
+            <div class="over-buttons">
+                <button class="btn-share" id="btn-share-main" onclick="shareResult()">📤 CONDIVIDI SFIDA</button>
+                <button class="btn-play-again" id="btn-replay-main" onclick="startGame()">🔄 RIGIOCA</button>
+                <button class="btn-menu" id="btn-menu-main" onclick="backToModes()">Cambia modalità di gioco</button>
+
+                <button class="btn-menu" onclick="openContactForm()">📧 SCRIVI AL CREATORE</button>
+            </div>
+            
+            <p id="t-update-msg" class="secondary-text" style="margin-top: 30px; color: #777; font-size: 0.55rem; line-height: 1.4;">IL SITO È IN COSTANTE AGGIORNAMENTO PER MIGLIORARE L'ESPERIENZA</p>
+        </div>
+    </div>
+
+    <div id="contact-modal" class="hidden" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); z-index: 10000; display: flex; align-items: center; justify-content: center; padding: 20px;">
+        <div style="background: #080808; border: 1px solid #222; padding: 30px; width: 100%; max-width: 350px; border-radius: 8px; text-align: center;">
+            <h3 style="color: #bdfd1a; margin-bottom: 20px; font-family: 'Inter', sans-serif; font-weight: 900;">CONTATTA L'AUTORE</h3>
+            
+            <form action="https://formspree.io/f/meepzkza" method="POST">
+                <input type="text" name="name" placeholder="Il tuo nome" required style="width: 100%; background: #111; border: 1px solid #333; color: white; padding: 12px; margin-bottom: 15px; border-radius: 4px; font-family: 'Inter', sans-serif;">
+                <textarea name="message" placeholder="Messaggio o proposta di acquisto..." required style="width: 100%; background: #111; border: 1px solid #333; color: white; padding: 12px; margin-bottom: 15px; border-radius: 4px; height: 100px; resize: none; font-family: 'Inter', sans-serif;"></textarea>
+                
+                <button type="submit" style="width: 100%; background: #bdfd1a; color: black; border: none; padding: 12px; font-weight: 900; cursor: pointer; border-radius: 4px; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 1px;">INVIA MESSAGGIO</button>
+                <p onclick="closeContactForm()" style="color: #555; font-size: 0.7rem; cursor: pointer; text-transform: uppercase; font-weight: 700; letter-spacing: 1px;">CHIUDI</p>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
