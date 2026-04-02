@@ -1,4 +1,4 @@
-/* --- DIZIONARIO LINGUE --- */
+/* --- DIZIONARIO LINGUE AGGIORNATO --- */
 const translations = {
     it: {
         tHomeTop: "THE GAME OF PERCEPTION",
@@ -33,14 +33,29 @@ const translations = {
         hintHL: "CHI HA L'ETÀ MAGGIORE?",
         btnShareMain: "📤 CONDIVIDI SFIDA",
         btnReplayMain: "🔄 RIGIOCA",
-        btnMenuMain: "Cambia modalità di gioco",
+        btnMenuMain: "Cambia modalità",
         tUpdateMsg: "IL SITO È IN COSTANTE AGGIORNAMENTO PER MIGLIORARE L'ESPERIENZA",
         shareText: "Ho fatto {score} punti a 'Guess The Age' ({mode})! 😎 Scommetto che non riesci a battermi. Prova qui: ",
         gameOverMessages: {
             lowTitle: "OPS...", lowEmoji: "😅", lowMsg: "Magari avevi il sole negli occhi? Riprova!",
             midTitle: "NON MALE!", midEmoji: "🙂", midMsg: "Hai un buon istinto, ma quelle rughe ti hanno ingannato!",
             highTitle: "FENOMENO!", highEmoji: "🏆", highMsg: "Hai un occhio bionico. Sei un esperto di biologia umana!"
-        }
+        },
+        contactPlaceholder: "Messaggio...",
+        contactNamePlaceholder: "Il tuo nome",
+        btnContactMain: "📧 SCRIVI AL CREATORE",
+        contactTitle: "CONTATTA L'AUTORE",
+        contactSend: "INVIA MESSAGGIO",
+        contactClose: "CHIUDI",
+        btnExit: "← ESCI",
+        reviveTitle: "SECONDA CHANCE!",
+        reviveMsgScalata: "Guarda un breve video per riavere le tue 5 VITE e continuare!",
+        reviveMsgHL: "Guarda un breve video per annullare l'errore e continuare!",
+        btnWatchAd: "▶ GUARDA VIDEO (15s)",
+        btnDeclineAd: "No, accetta la sconfitta",
+        cookieMsg: "Utilizziamo i cookie per migliorare l'esperienza di gioco e mostrare annunci personalizzati.",
+        cookieAcceptAll: "Accetta Tutti",
+        cookieEssential: "Solo Essenziali"
     },
     en: {
         tHomeTop: "THE GAME OF PERCEPTION",
@@ -82,7 +97,22 @@ const translations = {
             lowTitle: "OOPS...", lowEmoji: "😅", lowMsg: "Maybe the sun was in your eyes? Try again!",
             midTitle: "NOT BAD!", midEmoji: "🙂", midMsg: "You have good instincts, but those wrinkles tricked you!",
             highTitle: "PHENOM!", highEmoji: "🏆", highMsg: "You have a bionic eye. You're a human biology expert!"
-        }
+        },
+        contactPlaceholder: "Message...",
+        contactNamePlaceholder: "Your name",
+        btnContactMain: "📧 CONTACT CREATOR",
+        contactTitle: "CONTACT THE AUTHOR",
+        contactSend: "SEND MESSAGE",
+        contactClose: "CLOSE",
+        btnExit: "← EXIT",
+        reviveTitle: "SECOND CHANCE!",
+        reviveMsgScalata: "Watch a short video to refill your 5 LIVES and continue!",
+        reviveMsgHL: "Watch a short video to undo your mistake and continue!",
+        btnWatchAd: "▶ WATCH VIDEO (15s)",
+        btnDeclineAd: "No, accept defeat",
+        cookieMsg: "We use cookies to improve your gaming experience and show personalized ads.",
+        cookieAcceptAll: "Accept All",
+        cookieEssential: "Essential Only"
     },
     es: {
         tHomeTop: "EL JUEGO DE LA PERCEPCIÓN",
@@ -118,13 +148,28 @@ const translations = {
         btnShareMain: "📤 COMPARTIR RETO",
         btnReplayMain: "🔄 VOLVER A JUGAR",
         btnMenuMain: "Cambiar modo de juego",
-        tUpdateMsg: "EL SITIO ESTÁ EN CONSTANTE ACTUALIZACIÓN PARA MEJORAR LA EXPERIENCIA",
+        tUpdateMsg: "EL SITIO ESTÁ EN CONSTANTE ACTUALIZACIÓN",
         shareText: "¡Hice {score} puntos en 'Guess The Age' ({mode})! 😎 Apuesto a que no puedes vencerme. Prueba aquí: ",
         gameOverMessages: { 
             lowTitle: "UPS...", lowEmoji: "😅", lowMsg: "¿Tal vez tenías el sol en los ojos? ¡Intenta de nuevo!", 
             midTitle: "¡NADA MAL!", midEmoji: "🙂", midMsg: "Tienes buen instinto, ¡pero esas arrugas te engañaron!", 
-            highTitle: "¡FENÓMENO!", highEmoji: "🏆", highMsg: "Tienes un ojo biónico. ¡Eres un experto en biología humana!" 
-        }
+            highTitle: "¡FENÓMENO!", highEmoji: "🏆", highMsg: "Tienes un ojo biónico. ¡Eres un experto!" 
+        },
+        contactPlaceholder: "Mensaje...",
+        contactNamePlaceholder: "Tu nombre",
+        btnContactMain: "📧 CONTACTAR CREADOR",
+        contactTitle: "CONTACTAR AL AUTOR",
+        contactSend: "ENVIAR MENSAJE",
+        contactClose: "CERRAR",
+        btnExit: "← SALIR",
+        reviveTitle: "¡SEGUNDA OPORTUNIDAD!",
+        reviveMsgScalata: "¡Mira un breve video para recargar tus 5 VIDAS y continuar!",
+        reviveMsgHL: "¡Mira un video para deshacer tu error y continuar!",
+        btnWatchAd: "▶ VER VIDEO (15s)",
+        btnDeclineAd: "No, aceptar la derrota",
+        cookieMsg: "Usamos cookies para mejorar tu experiencia y mostrar anuncios.",
+        cookieAcceptAll: "Aceptar Todo",
+        cookieEssential: "Solo Esenciales"
     },
     fr: {
         tHomeTop: "LE JEU DE LA PERCEPTION",
@@ -159,14 +204,29 @@ const translations = {
         hintHL: "QUI EST LE PLUS ÂGÉ ?",
         btnShareMain: "📤 PARTAGER LE DÉFI",
         btnReplayMain: "🔄 REJOUER",
-        btnMenuMain: "Changer de mode de jeu",
-        tUpdateMsg: "LE SITE EST CONSTAMMENT MIS À JOUR POUR AMÉLIORER L'EXPÉRIENCE",
+        btnMenuMain: "Changer de mode",
+        tUpdateMsg: "LE SITE EST CONSTAMMENT MIS À JOUR",
         shareText: "J'ai marqué {score} points à 'Guess The Age' ({mode}) ! 😎 Je parie que tu ne peux pas me battre. Essaie ici: ",
         gameOverMessages: { 
             lowTitle: "OUPS...", lowEmoji: "😅", lowMsg: "Le soleil était dans vos yeux ? Réessayez !", 
             midTitle: "PAS MAL !", midEmoji: "🙂", midMsg: "Vous avez un bon instinct, mais ces rides vous ont trompé !", 
             highTitle: "PHÉNOMÈNE !", highEmoji: "🏆", highMsg: "Vous avez un œil bionique. Vous êtes un expert !" 
-        }
+        },
+        contactPlaceholder: "Message...",
+        contactNamePlaceholder: "Votre nom",
+        btnContactMain: "📧 CONTACTER LE CRÉATEUR",
+        contactTitle: "CONTACTER L'AUTEUR",
+        contactSend: "ENVOYER LE MESSAGE",
+        contactClose: "FERMER",
+        btnExit: "← QUITTER",
+        reviveTitle: "SECONDE CHANCE !",
+        reviveMsgScalata: "Regardez une vidéo pour recharger vos 5 VIES !",
+        reviveMsgHL: "Regardez une vidéo pour annuler l'erreur !",
+        btnWatchAd: "▶ VOIR LA VIDÉO (15s)",
+        btnDeclineAd: "Non, accepter la défaite",
+        cookieMsg: "Nous utilisons des cookies pour améliorer votre expérience.",
+        cookieAcceptAll: "Tout Accepter",
+        cookieEssential: "Essentiels Uniquement"
     },
     de: {
         tHomeTop: "DAS SPIEL DER WAHRNEHMUNG",
@@ -179,7 +239,7 @@ const translations = {
         tDiscP2: "Das menschliche Altern variiert drastisch je nach <span class='highlight-word'>Breitengrad</span>, <span class='highlight-word'>endogenem Cortisol</span> und <span class='highlight-word'>regionaler Epigenetik</span>.",
         tDiscP3: "Daher könnten einige Alter <strong>von deinen lokalen ästhetischen Standards abweichen</strong>. Der Test fordert deine Fähigkeit heraus...",
         tBtnPros: "WEITER →",
-        tDiscBot: "IDENTIFIKATION DER PERSONEN AUF DEM NÄCHSTEN BILDSCHIRM",
+        tDiscBot: "IDENTIFIKATION DER PERSONEN",
         tBackLang: "← SPRACHE ÄNDERN",
         tBack: "← ZURÜCK",
         tModeTitle: "Modus wählen",
@@ -202,13 +262,28 @@ const translations = {
         btnShareMain: "📤 HERAUSFORDERUNG TEILEN",
         btnReplayMain: "🔄 NOCHMAL SPIELEN",
         btnMenuMain: "Spielmodus ändern",
-        tUpdateMsg: "DIE SEITE WIRD STÄNDIG AKTUALISIERT, UM DAS ERLEBNIS ZU VERBESSERN",
+        tUpdateMsg: "DIE SEITE WIRD STÄNDIG AKTUALISIERT",
         shareText: "Ich habe {score} Punkte bei 'Guess The Age' ({mode}) erzielt! 😎 Wetten, du kannst mich nicht schlagen? Versuch es hier: ",
         gameOverMessages: { 
             lowTitle: "UPS...", lowEmoji: "😅", lowMsg: "Vielleicht war die Sonne in deinen Augen? Versuch es noch einmal!", 
             midTitle: "NICHT SCHLECHT!", midEmoji: "🙂", midMsg: "Du hast gute Instinkte, aber diese Falten haben dich getäuscht!", 
             highTitle: "PHÄNOMEN!", highEmoji: "🏆", highMsg: "Du hast ein bionisches Auge. Du bist ein Experte!" 
-        }
+        },
+        contactPlaceholder: "Nachricht...",
+        contactNamePlaceholder: "Dein Name",
+        btnContactMain: "📧 SCHÖPFER KONTAKTIEREN",
+        contactTitle: "AUTOR KONTAKTIEREN",
+        contactSend: "NACHRICHT SENDEN",
+        contactClose: "SCHLIESSEN",
+        btnExit: "← VERLASSEN",
+        reviveTitle: "ZWEITE CHANCE!",
+        reviveMsgScalata: "Schau ein Video, um 5 LEBEN aufzufüllen!",
+        reviveMsgHL: "Schau ein Video, um deinen Fehler rückgängig zu machen!",
+        btnWatchAd: "▶ VIDEO ANSEHEN (15s)",
+        btnDeclineAd: "Nein, Niederlage akzeptieren",
+        cookieMsg: "Wir verwenden Cookies für eine bessere Erfahrung.",
+        cookieAcceptAll: "Alle Akzeptieren",
+        cookieEssential: "Nur Essenzielle"
     },
     pt: {
         tHomeTop: "O JOGO DA PERCEPÇÃO",
@@ -217,7 +292,7 @@ const translations = {
         tHomeBot: "UM EXPERIMENTO SOCIAL SOBRE PERCEPÇÃO",
         tDiscTop: "AVISO DE PROTOCOLO 04-B",
         tDiscTitle1: "Percepção",
-        tDiscP1: "As imagens apresentadas são geradas através de algoritmos de síntese neural baseados no estudo <strong>'Trans-Global Aging Perception'</strong>.",
+        tDiscP1: "As imagens apresentadas são geradas através de algoritmos de síntesis neural baseados no estudo <strong>'Trans-Global Aging Perception'</strong>.",
         tDiscP2: "O envelhecimento humano varia drasticamente de acordo com a <span class='highlight-word'>latitude</span>, o <span class='highlight-word'>cortisol endógeno</span> e a <span class='highlight-word'>epigenética regional</span>.",
         tDiscP3: "Portanto, algumas idades podem <strong>diferir dos seus padrões estéticos locais</strong>. O teste desafia a sua capacidade de decodificar a idade biológica universal.",
         tBtnPros: "AVANÇAR →",
@@ -244,13 +319,28 @@ const translations = {
         btnShareMain: "📤 COMPARTILHAR DESAFIO",
         btnReplayMain: "🔄 JOGAR NOVAMENTE",
         btnMenuMain: "Mudar modo de jogo",
-        tUpdateMsg: "O SITE ESTÁ EM CONSTANTE ATUALIZAÇÃO PARA MELHORAR A EXPERIÊNCIA",
+        tUpdateMsg: "O SITE ESTÁ EM CONSTANTE ATUALIZAÇÃO",
         shareText: "Fiz {score} pontos no 'Guess The Age' ({mode})! 😎 Aposto que você não consegue me vencer. Tente aqui: ",
         gameOverMessages: { 
             lowTitle: "OPS...", lowEmoji: "😅", lowMsg: "Talvez o sol estivesse nos seus olhos? Tente novamente!", 
             midTitle: "NADA MAU!", midEmoji: "🙂", midMsg: "Você tem bons instintos, mas essas rugas te enganaram!", 
             highTitle: "FENÔMENO!", highEmoji: "🏆", highMsg: "Você tem um olho biônico. Você é um especialista!" 
-        }
+        },
+        contactPlaceholder: "Mensagem...",
+        contactNamePlaceholder: "Seu nome",
+        btnContactMain: "📧 CONTATAR CRIADOR",
+        contactTitle: "CONTATAR O AUTOR",
+        contactSend: "ENVIAR MENSAGEM",
+        contactClose: "FECHAR",
+        btnExit: "← SAIR",
+        reviveTitle: "SEGUNDA CHANCE!",
+        reviveMsgScalata: "Assista a um vídeo para recarregar suas 5 VIDAS!",
+        reviveMsgHL: "Assista a um vídeo para desfazer seu erro!",
+        btnWatchAd: "▶ ASSISTIR VÍDEO (15s)",
+        btnDeclineAd: "Não, aceitar a derrota",
+        cookieMsg: "Usamos cookies para melhorar sua experiência.",
+        cookieAcceptAll: "Aceitar Tudo",
+        cookieEssential: "Apenas Essenciais"
     }
 };
 
@@ -294,7 +384,6 @@ const modeData = {
     }
 };
 
-/* LE 100 FOTO CON ISO AGGIORNATI */
 const fotoDisponibili = [
     "18_1_IT", "19_1_CN", "20_1_NG", "21_1_MX", "22_1_EG", "23_1_GB", "24_1_JP", "25_1_KE", "26_1_IN", "27_1_BR", 
     "28_1_US", "29_1_JP", "30_1_ET", "31_1_ES", "32_1_IT", "33_1_IR", "34_1_KR", "35_1_GH", "36_1_IN", "37_1_AU", 
@@ -321,6 +410,27 @@ let gameState = {
     currentLang: 'it',
     hlPhotos: []
 };
+
+/* --- INIZIALIZZAZIONE COOKIE --- */
+document.addEventListener("DOMContentLoaded", function() {
+    if (localStorage.getItem("cookiesAccepted") !== "true") {
+        document.getElementById("cookie-banner").classList.remove("hidden");
+    }
+});
+
+function acceptCookies(acceptAll) {
+    localStorage.setItem("cookiesAccepted", "true");
+    
+    if(acceptAll) {
+        // Qui andrà il log per attivare gli ads tracciati
+        console.log("Cookies Tutti Accettati");
+    } else {
+        // Qui andrà il log per gli ads NON personalizzati
+        console.log("Cookies Solo Essenziali Accettati");
+    }
+    
+    document.getElementById("cookie-banner").classList.add("hidden");
+}
 
 /* --- GESTIONE LINGUA --- */
 function setLanguage(lang) {
@@ -356,11 +466,27 @@ function setLanguage(lang) {
     document.getElementById('btn-replay-main').innerText = t.btnReplayMain;
     document.getElementById('btn-menu-main').innerText = t.btnMenuMain;
     document.getElementById('t-update-msg').innerText = t.tUpdateMsg;
+    
+    document.getElementById('btn-contact-main').innerText = t.btnContactMain;
+    document.getElementById('t-contact-title').innerText = t.contactTitle;
+    document.getElementById('t-contact-send').innerText = t.contactSend;
+    document.getElementById('t-contact-close').innerText = t.contactClose;
+    document.getElementById('contact-msg-input').placeholder = t.contactPlaceholder;
+    document.getElementById('contact-name-input').placeholder = t.contactNamePlaceholder;
+    document.getElementById('t-btn-exit').innerText = t.btnExit;
+    
+    document.getElementById('t-revive-title').innerText = t.reviveTitle;
+    document.getElementById('t-btn-watch-ad').innerText = t.btnWatchAd;
+    document.getElementById('t-btn-decline-ad').innerText = t.btnDeclineAd;
+    
+    document.getElementById('t-cookie-msg').innerText = t.cookieMsg;
+    document.getElementById('btn-cookie-accept').innerText = t.cookieAcceptAll;
+    document.getElementById('btn-cookie-essential').innerText = t.cookieEssential;
 
     document.getElementById('screen-language').classList.add('hidden');
     document.getElementById('screen-home').classList.remove('hidden');
 
-    selectMode(document.querySelector('.mode-card.active'), gameState.selectedMode);
+    selectMode(document.querySelector('.mode-card.active') || document.querySelectorAll('.mode-card')[0], gameState.selectedMode);
 }
 
 function showLanguageScreen() {
@@ -378,6 +504,7 @@ function showModesScreen() {
     document.getElementById('screen-home').classList.add('hidden');
     document.getElementById('screen-disclaimer').classList.add('hidden');
     document.getElementById('screen-modes').classList.remove('hidden');
+    document.getElementById('screen-modes').scrollTop = 0;
 }
 
 function showHomeScreen() {
@@ -402,7 +529,6 @@ function selectMode(element, mode) {
     
     titleEl.innerText = data.title;
     document.getElementById('detail-description').innerText = data.desc;
-    
     if (mode === 'versus') {
         titleEl.className = 'color-versus';
     } else {
@@ -410,14 +536,13 @@ function selectMode(element, mode) {
     }
     
     const listElement = document.getElementById('detail-list');
-    listElement.innerHTML = ''; 
+    listElement.innerHTML = '';
     data.rules.forEach(rule => {
         const li = document.createElement('li');
         li.innerText = rule;
         listElement.appendChild(li);
     });
 
-    // Gestione Bottone Inizia (Se disabilitato mostra prossimamente)
     const btnStart = document.getElementById('btn-start-main');
     if(isAvailable) {
         btnStart.classList.remove('disabled');
@@ -430,16 +555,23 @@ function selectMode(element, mode) {
     }
 }
 
+function confirmExitGame() {
+    clearInterval(gameState.timerId);
+    document.getElementById('screen-game').classList.add('hidden');
+    document.getElementById('screen-modes').classList.remove('hidden');
+}
+
 function startGame() {
     document.getElementById('screen-modes').classList.add('hidden');
     document.getElementById('screen-game-over').classList.add('hidden');
     document.getElementById('screen-game').classList.remove('hidden');
+    document.getElementById('screen-game').scrollTop = 0;
     
     gameState.score = 0;
     gameState.consecutiveCorrect = 0;
     gameState.isTransitioning = false;
     clearInterval(gameState.timerId);
-
+    
     const t = translations[gameState.currentLang];
 
     if (gameState.selectedMode === 'scalata') {
@@ -475,7 +607,7 @@ function startTimer() {
     const timerBox = document.getElementById('timer-box');
     timerBox.classList.remove('timer-danger');
     timerVal.innerText = gameState.timeLeft;
-
+    
     gameState.timerId = setInterval(() => {
         gameState.timeLeft--;
         timerVal.innerText = gameState.timeLeft;
@@ -488,7 +620,7 @@ function startTimer() {
 
         if (gameState.timeLeft <= 0) {
             clearInterval(gameState.timerId);
-            showGameOver();
+            showGameOver(); 
         }
     }, 1000);
 }
@@ -499,7 +631,7 @@ function updateGameUI() {
     
     if (gameState.selectedMode === 'scalata') {
         const livesContainer = document.getElementById('lives');
-        livesContainer.innerHTML = ''; 
+        livesContainer.innerHTML = '';
         for (let i = 1; i <= gameState.maxLives; i++) {
             const heart = document.createElement('span');
             heart.innerText = '❤';
@@ -515,25 +647,24 @@ function updateGameUI() {
     }
 }
 
-/* --- LOGICA DI GIOCO & BANDIERE --- */
+/* --- LOGICA DI GIOCO --- */
 function nextRound() {
     gameState.isTransitioning = false;
     
     if (gameState.selectedMode === 'higherlower') {
-        // Reset Colori UI
         document.getElementById('hl-card-0').style.borderColor = "";
         document.getElementById('hl-card-1').style.borderColor = "";
 
-        // Genera 2 foto differenti con età differenti
-        let foto1 = fotoDisponibili[Math.floor(Math.random() * fotoDisponibili.length)];
-        let foto2;
-        let age1 = parseInt(foto1.split('_')[0]);
-        let age2;
-        
+        let foto1, foto2, age1, age2, ageGap;
+        let minGap = gameState.score >= 100 ? 1 : 10; 
+
         do {
+            foto1 = fotoDisponibili[Math.floor(Math.random() * fotoDisponibili.length)];
             foto2 = fotoDisponibili[Math.floor(Math.random() * fotoDisponibili.length)];
+            age1 = parseInt(foto1.split('_')[0]);
             age2 = parseInt(foto2.split('_')[0]);
-        } while (foto1 === foto2 || age1 === age2);
+            ageGap = Math.abs(age1 - age2);
+        } while (foto1 === foto2 || age1 === age2 || ageGap < minGap);
 
         gameState.hlPhotos = [
             { string: foto1, age: age1, iso: foto1.split('_')[2].toLowerCase() },
@@ -548,9 +679,7 @@ function nextRound() {
             <img src="${foto2}.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
             <img class="flag-icon" src="https://flagcdn.com/w80/${gameState.hlPhotos[1].iso}.png" alt="Country Flag">
         `;
-
     } else {
-        // Logica Standard
         const buttons = document.querySelectorAll('.btn-answer');
         buttons.forEach(btn => {
             btn.style.backgroundColor = "";
@@ -562,23 +691,23 @@ function nextRound() {
         const photoParts = fotoScelta.split('_'); 
         
         gameState.currentCorrectAge = parseInt(photoParts[0]);
-        const isoCode = photoParts[2].toLowerCase(); 
+        const isoCode = photoParts[2].toLowerCase();
 
         const photoContainer = document.getElementById('photo-container');
         photoContainer.innerHTML = `
             <img src="${fotoScelta}.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
             <img class="flag-icon" src="https://flagcdn.com/w80/${isoCode}.png" alt="Country Flag">
         `;
-        
         generateAnswers(gameState.currentCorrectAge);
     }
 }
 
 function generateAnswers(correctAge) {
     let answers = [correctAge];
-    while(answers.length < 4) {
+    while(answers.length < 3) {
         let range = correctAge < 30 ? 15 : 25;
         let fakeAge = correctAge + (Math.floor(Math.random() * range) + 5) * (Math.random() > 0.5 ? 1 : -1);
+        
         if(fakeAge >= 18 && fakeAge <= 95 && !answers.includes(fakeAge)) {
             if(!answers.some(a => Math.abs(a - fakeAge) < 3)) answers.push(fakeAge);
         }
@@ -598,7 +727,7 @@ function checkAnswer(btn, selectedAge) {
     gameState.isTransitioning = true;
 
     const isCorrect = (selectedAge === gameState.currentCorrectAge);
-
+    
     if(isCorrect) {
         btn.style.backgroundColor = "#bdfd1a";
         btn.style.borderColor = "#bdfd1a";
@@ -633,7 +762,7 @@ function checkAnswer(btn, selectedAge) {
 
     setTimeout(() => {
         if(gameState.selectedMode === 'scalata' && gameState.lives <= 0) {
-            showGameOver();
+            handleDeath();
         } else {
             nextRound();
         }
@@ -662,7 +791,6 @@ function checkAnswerHL(selectedIndex) {
             nextRound();
         }, 1000);
     } else {
-        // Sudden Death - Highlight correct and wrong
         if(selectedIndex === 0) {
             card0.style.borderColor = "#ff4b4b";
             card1.style.borderColor = "#bdfd1a";
@@ -672,29 +800,82 @@ function checkAnswerHL(selectedIndex) {
         }
         
         updateGameUI();
-        
         setTimeout(() => {
-            showGameOver();
+            handleDeath();
         }, 1200);
     }
+}
+
+/* --- LOGICA PUBBLICITA' E GAME OVER --- */
+function handleDeath() {
+    if(gameState.selectedMode === 'scalata' || gameState.selectedMode === 'higherlower') {
+        const t = translations[gameState.currentLang];
+        document.getElementById('t-revive-msg').innerText = gameState.selectedMode === 'scalata' ? t.reviveMsgScalata : t.reviveMsgHL;
+        document.getElementById('revive-modal').classList.remove('hidden');
+    } else {
+        showGameOver();
+    }
+}
+
+function watchAdToRevive() {
+    const btn = document.getElementById('t-btn-watch-ad');
+    const loadingBar = document.getElementById('ad-loading-bar');
+    const progressBar = document.getElementById('ad-progress');
+    
+    btn.classList.add('hidden');
+    loadingBar.classList.remove('hidden');
+    
+    setTimeout(() => {
+        progressBar.style.transition = "width 3s linear"; 
+        progressBar.style.width = "100%";
+    }, 50);
+
+    setTimeout(() => {
+        if(gameState.selectedMode === 'scalata') gameState.lives = 5;
+        if(gameState.selectedMode === 'higherlower') gameState.lives = 1;
+        
+        document.getElementById('revive-modal').classList.add('hidden');
+        btn.classList.remove('hidden');
+        loadingBar.classList.add('hidden');
+        progressBar.style.transition = "none";
+        progressBar.style.width = "0%";
+        
+        if(gameState.selectedMode === 'higherlower') {
+            document.getElementById('hl-card-0').style.borderColor = "";
+            document.getElementById('hl-card-1').style.borderColor = "";
+        }
+        
+        updateGameUI();
+        nextRound();
+    }, 3050); 
+}
+
+function declineReviveAndDie() {
+    document.getElementById('revive-modal').classList.add('hidden');
+    showGameOver();
 }
 
 function showGameOver() {
     clearInterval(gameState.timerId);
     document.getElementById('screen-game').classList.add('hidden');
     document.getElementById('screen-game-over').classList.remove('hidden');
+    document.getElementById('screen-game-over').scrollTop = 0;
     document.getElementById('over-score').innerText = gameState.score;
 
     const t = translations[gameState.currentLang];
     const msgs = t.gameOverMessages;
+    
     let title, emoji, msg;
 
     if(gameState.score < 40) {
-        title = msgs.lowTitle; emoji = msgs.lowEmoji; msg = msgs.lowMsg;
+        title = msgs.lowTitle;
+        emoji = msgs.lowEmoji; msg = msgs.lowMsg;
     } else if(gameState.score < 120) {
-        title = msgs.midTitle; emoji = msgs.midEmoji; msg = msgs.midMsg;
+        title = msgs.midTitle;
+        emoji = msgs.midEmoji; msg = msgs.midMsg;
     } else {
-        title = msgs.highTitle; emoji = msgs.highEmoji; msg = msgs.highMsg;
+        title = msgs.highTitle;
+        emoji = msgs.highEmoji; msg = msgs.highMsg;
     }
 
     document.getElementById('over-title').innerText = title;
@@ -719,7 +900,7 @@ function shareResult() {
         }).catch(console.error);
     } else {
         navigator.clipboard.writeText(text);
-        alert("Text copied to clipboard!"); 
+        alert("Text copied to clipboard!");
     }
 }
 
