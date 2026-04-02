@@ -466,7 +466,6 @@ function setLanguage(lang) {
     document.getElementById('btn-replay-main').innerText = t.btnReplayMain;
     document.getElementById('btn-menu-main').innerText = t.btnMenuMain;
     document.getElementById('t-update-msg').innerText = t.tUpdateMsg;
-    
     document.getElementById('btn-contact-main').innerText = t.btnContactMain;
     document.getElementById('t-contact-title').innerText = t.contactTitle;
     document.getElementById('t-contact-send').innerText = t.contactSend;
@@ -542,7 +541,7 @@ function selectMode(element, mode) {
         li.innerText = rule;
         listElement.appendChild(li);
     });
-
+    
     const btnStart = document.getElementById('btn-start-main');
     if(isAvailable) {
         btnStart.classList.remove('disabled');
@@ -573,7 +572,7 @@ function startGame() {
     clearInterval(gameState.timerId);
     
     const t = translations[gameState.currentLang];
-
+    
     if (gameState.selectedMode === 'scalata') {
         gameState.lives = 5;
         document.getElementById('lives').classList.remove('hidden');
@@ -632,6 +631,7 @@ function updateGameUI() {
     if (gameState.selectedMode === 'scalata') {
         const livesContainer = document.getElementById('lives');
         livesContainer.innerHTML = '';
+        
         for (let i = 1; i <= gameState.maxLives; i++) {
             const heart = document.createElement('span');
             heart.innerText = '❤';
@@ -654,10 +654,10 @@ function nextRound() {
     if (gameState.selectedMode === 'higherlower') {
         document.getElementById('hl-card-0').style.borderColor = "";
         document.getElementById('hl-card-1').style.borderColor = "";
-
+        
         let foto1, foto2, age1, age2, ageGap;
-        let minGap = gameState.score >= 100 ? 1 : 10; 
-
+        let minGap = gameState.score >= 100 ? 1 : 10;
+        
         do {
             foto1 = fotoDisponibili[Math.floor(Math.random() * fotoDisponibili.length)];
             foto2 = fotoDisponibili[Math.floor(Math.random() * fotoDisponibili.length)];
@@ -665,20 +665,22 @@ function nextRound() {
             age2 = parseInt(foto2.split('_')[0]);
             ageGap = Math.abs(age1 - age2);
         } while (foto1 === foto2 || age1 === age2 || ageGap < minGap);
-
+        
         gameState.hlPhotos = [
             { string: foto1, age: age1, iso: foto1.split('_')[2].toLowerCase() },
             { string: foto2, age: age2, iso: foto2.split('_')[2].toLowerCase() }
         ];
-
+        
         document.getElementById('hl-photo-0').innerHTML = `
             <img src="${foto1}.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
             <img class="flag-icon" src="https://flagcdn.com/w80/${gameState.hlPhotos[0].iso}.png" alt="Country Flag">
         `;
+        
         document.getElementById('hl-photo-1').innerHTML = `
             <img src="${foto2}.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
             <img class="flag-icon" src="https://flagcdn.com/w80/${gameState.hlPhotos[1].iso}.png" alt="Country Flag">
         `;
+        
     } else {
         const buttons = document.querySelectorAll('.btn-answer');
         buttons.forEach(btn => {
@@ -686,24 +688,26 @@ function nextRound() {
             btn.style.borderColor = "";
             btn.style.color = "";
         });
-
+        
         const fotoScelta = fotoDisponibili[Math.floor(Math.random() * fotoDisponibili.length)];
         const photoParts = fotoScelta.split('_'); 
         
         gameState.currentCorrectAge = parseInt(photoParts[0]);
         const isoCode = photoParts[2].toLowerCase();
-
+        
         const photoContainer = document.getElementById('photo-container');
         photoContainer.innerHTML = `
             <img src="${fotoScelta}.jpg" style="width:100%; height:100%; object-fit:cover; border-radius:4px;">
             <img class="flag-icon" src="https://flagcdn.com/w80/${isoCode}.png" alt="Country Flag">
         `;
+        
         generateAnswers(gameState.currentCorrectAge);
     }
 }
 
 function generateAnswers(correctAge) {
     let answers = [correctAge];
+    
     while(answers.length < 3) {
         let range = correctAge < 30 ? 15 : 25;
         let fakeAge = correctAge + (Math.floor(Math.random() * range) + 5) * (Math.random() > 0.5 ? 1 : -1);
@@ -732,6 +736,7 @@ function checkAnswer(btn, selectedAge) {
         btn.style.backgroundColor = "#bdfd1a";
         btn.style.borderColor = "#bdfd1a";
         btn.style.color = "#000";
+        
         gameState.score += 10;
         gameState.consecutiveCorrect++;
 
@@ -752,7 +757,7 @@ function checkAnswer(btn, selectedAge) {
                 b.style.color = "#bdfd1a";
             }
         });
-
+        
         if(gameState.selectedMode === 'scalata') {
             gameState.lives--;
         }
@@ -775,6 +780,7 @@ function checkAnswerHL(selectedIndex) {
 
     const age0 = gameState.hlPhotos[0].age;
     const age1 = gameState.hlPhotos[1].age;
+    
     const isCorrect = (selectedIndex === 0 && age0 > age1) || (selectedIndex === 1 && age1 > age0);
     
     const card0 = document.getElementById('hl-card-0');
@@ -790,6 +796,7 @@ function checkAnswerHL(selectedIndex) {
         setTimeout(() => {
             nextRound();
         }, 1000);
+        
     } else {
         if(selectedIndex === 0) {
             card0.style.borderColor = "#ff4b4b";
@@ -800,6 +807,7 @@ function checkAnswerHL(selectedIndex) {
         }
         
         updateGameUI();
+        
         setTimeout(() => {
             handleDeath();
         }, 1200);
@@ -829,7 +837,7 @@ function watchAdToRevive() {
         progressBar.style.transition = "width 3s linear"; 
         progressBar.style.width = "100%";
     }, 50);
-
+    
     setTimeout(() => {
         if(gameState.selectedMode === 'scalata') gameState.lives = 5;
         if(gameState.selectedMode === 'higherlower') gameState.lives = 1;
@@ -847,7 +855,7 @@ function watchAdToRevive() {
         
         updateGameUI();
         nextRound();
-    }, 3050); 
+    }, 3050);
 }
 
 function declineReviveAndDie() {
@@ -860,22 +868,25 @@ function showGameOver() {
     document.getElementById('screen-game').classList.add('hidden');
     document.getElementById('screen-game-over').classList.remove('hidden');
     document.getElementById('screen-game-over').scrollTop = 0;
+    
     document.getElementById('over-score').innerText = gameState.score;
 
     const t = translations[gameState.currentLang];
     const msgs = t.gameOverMessages;
     
     let title, emoji, msg;
-
+    
     if(gameState.score < 40) {
         title = msgs.lowTitle;
         emoji = msgs.lowEmoji; msg = msgs.lowMsg;
     } else if(gameState.score < 120) {
         title = msgs.midTitle;
-        emoji = msgs.midEmoji; msg = msgs.midMsg;
+        emoji = msgs.midEmoji;
+        msg = msgs.midMsg;
     } else {
         title = msgs.highTitle;
-        emoji = msgs.highEmoji; msg = msgs.highMsg;
+        emoji = msgs.highEmoji;
+        msg = msgs.highMsg;
     }
 
     document.getElementById('over-title').innerText = title;
