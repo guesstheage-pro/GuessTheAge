@@ -3,7 +3,7 @@
 body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffffff; height: 100vh; display: flex; justify-content: center; align-items: center; overflow: hidden; }
 
 /* Contenitore principale con scroll personalizzato per Mobile */
-.container { width: 100%; max-width: 420px; padding: 20px; max-height: 100vh; }
+.container { width: 100%; max-width: 420px; padding: 20px; max-height: 100vh; position: relative; z-index: 10; }
 .scrollable { overflow-y: auto; overflow-x: hidden; scroll-behavior: smooth; }
 .scrollable::-webkit-scrollbar { width: 6px; }
 .scrollable::-webkit-scrollbar-track { background: #111; border-radius: 4px; }
@@ -28,9 +28,20 @@ body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffff
 .btn-lang { background: #080808; color: #fff; border: 2px solid #222; padding: 20px 10px; font-size: 1.1rem; font-weight: 900; border-radius: 8px; cursor: pointer; transition: 0.3s; letter-spacing: 0.5px; display: flex; align-items: center; justify-content: center; gap: 8px; }
 .btn-lang:hover { border-color: #bdfd1a; color: #bdfd1a; box-shadow: 0 0 25px rgba(189, 253, 26, 0.2); transform: translateY(-3px); }
 
-/* STILI BANDIERA IN GAME */
+/* STILI BANDIERA IN GAME - FIX PROPORZIONI SCHIACCIATE */
 .photo-placeholder { position: relative; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
-.flag-icon { position: absolute; top: 8px; right: 8px; width: 35px; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.8); border: 2px solid rgba(255, 255, 255, 0.1); z-index: 10;}
+.flag-icon { 
+    position: absolute; 
+    top: 8px; 
+    right: 8px; 
+    width: 40px !important; 
+    height: auto !important; 
+    object-fit: contain !important; 
+    border-radius: 4px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.8); 
+    border: 2px solid rgba(255, 255, 255, 0.1); 
+    z-index: 20;
+}
 
 /* HOME */
 .secondary-text { color: #444; font-size: 0.65rem; font-weight: 700; letter-spacing: 0.15rem; text-transform: uppercase; }
@@ -142,9 +153,33 @@ body { font-family: 'Inter', sans-serif; background-color: #050505; color: #ffff
 /* --- PROTEZIONE IMMAGINI E CONTENUTI --- */
 body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
 img { pointer-events: none; -webkit-touch-callout: none; -webkit-user-drag: none; }
-img[src*="flagcdn"] {
-    width: 40px !important;
-    height: auto !important;
-    object-fit: cover !important;
-    border-radius: 4px !important;
+
+/* BANNER LATERALI PER PC (visibili solo su schermi grandi) */
+.desktop-banner {
+    display: none; 
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 160px;
+    height: 600px;
+    background: #080808;
+    border: 1px dashed #333;
+    z-index: 5;
+    justify-content: center;
+    align-items: center;
+}
+.desktop-banner.left { left: 20px; }
+.desktop-banner.right { right: 20px; }
+
+.ad-placeholder-sidebar {
+    color: #444;
+    font-size: 0.7rem;
+    font-weight: 900;
+    text-align: center;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+}
+
+@media (min-width: 1200px) {
+    .desktop-banner { display: flex; }
 }
